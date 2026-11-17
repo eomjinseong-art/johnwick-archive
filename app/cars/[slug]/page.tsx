@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { CarPhoto } from "@/components/CarPhoto";
 import { CoupangCard } from "@/components/CoupangCard";
 import { carBySlug, cars } from "@/data/cars";
 import { filmBySlug } from "@/data/films";
@@ -28,6 +29,7 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
       <p className="mt-4 text-xs tracking-[0.22em] text-blood">{car.kind} · {car.maker} · {car.role}</p>
       <h1 className="mt-2 font-serif text-3xl text-gold sm:text-4xl">{car.nameKo}</h1>
       <p className="mt-1 text-sm text-muted">{car.nameEn}</p>
+      <CarPhoto slug={car.slug} alt={`${car.nameEn} (같은 차종 참고 사진)`} variant="hero" />
       <p className="mt-4 text-lg leading-8">{car.summary}</p>
 
       <section className="mt-10">

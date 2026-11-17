@@ -1,3 +1,5 @@
+import { cars } from "@/data/cars";
+import { carImage } from "@/lib/car-images";
 import { PageTitle } from "@/components/ui";
 import { films } from "@/data/films";
 import { pageMetadata } from "@/lib/seo";
@@ -37,6 +39,19 @@ export default function CreditsPage() {
       <section className="mt-8">
         <h2 className="font-serif text-xl">이미지</h2>
         <p className="mt-2 text-sm leading-7 text-muted">포스터와 영화 스틸은 쓰지 않습니다. 키아누 리브스 사진: Gabriel Hutchinson, 위키미디어 공용, CC BY-SA 4.0.</p>
+        <p className="mt-4 text-sm leading-7 text-muted">차량 사진은 위키미디어 커먼스의 같은 차종 사진입니다(영화 속 실제 차량 아님).</p>
+        <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted">
+          {cars.map((c) => {
+            const img = carImage(c.slug);
+            if (!img) return null;
+            return (
+              <li key={c.slug}>
+                {c.nameKo}:{" "}
+                <a className="underline" href={img.pageUrl} target="_blank" rel="noopener noreferrer">{img.author || img.title}</a>, {img.license}
+              </li>
+            );
+          })}
+        </ul>
       </section>
     </div>
   );
