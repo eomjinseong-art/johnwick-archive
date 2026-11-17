@@ -7,7 +7,7 @@ export function CoupangBanner() {
       <a
         href={COUPANG_URL}
         target="_blank"
-        rel="sponsored noopener noreferrer nofollow"
+        rel="sponsored noopener"
         className="flex items-center gap-3 rounded-sm border border-line bg-card px-4 py-3 text-sm text-paper transition-colors hover:border-gold hover:text-gold"
       >
         <span className="shrink-0 rounded-sm border border-line px-1.5 py-0.5 text-[10px] tracking-wider text-muted">광고</span>
