@@ -64,6 +64,7 @@ export default function KeanuPage() {
         <ul className="mt-2 list-disc pl-5">
           <li><Link href="/characters#john-wick" className="underline">존 윅 캐릭터</Link></li>
           <li><Link href="/cars/yamaha-mt09" className="underline">3편의 야마하 MT-09</Link> — 오토바이 마니아 키아누</li>
+          <li><a href="https://tinalinkeom.vercel.app/keanu?utm_source=johnwick-archive&utm_medium=keanu&utm_campaign=archive-network" className="underline">티나 허브의 키아누 리브스 전기</a> — 더 긴 인생 이야기와 출연작</li>
           <li><a href="https://nadoo-people.vercel.app/?utm_source=johnwick-archive&utm_medium=keanu&utm_campaign=archive-network" className="underline">나두인물</a> — 영화로 만나는 실존 인물 이야기</li>
         </ul>
         <p className="mt-3 text-xs">참고: <a className="underline" href="https://en.wikipedia.org/wiki/Keanu_Reeves" target="_blank" rel="noopener noreferrer">Wikipedia — Keanu Reeves</a></p>
