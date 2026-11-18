@@ -6,6 +6,14 @@ import { characters } from "@/data/characters";
 import { filmBySlug, films } from "@/data/films";
 import { pageMetadata } from "@/lib/seo";
 
+/** 건 아카이브(gun-archive.vercel.app)의 같은 영화 페이지 slug */
+const GUN_FILM: Record<string, string> = {
+  "john-wick": "john-wick",
+  "chapter-2": "john-wick-chapter-2",
+  "chapter-3-parabellum": "john-wick-chapter-3",
+  "chapter-4": "john-wick-chapter-4",
+};
+
 export function generateStaticParams() {
   return films.map((f) => ({ slug: f.slug }));
 }
@@ -85,6 +93,14 @@ export default async function FilmPage({ params }: { params: Promise<{ slug: str
               </li>
             ))}
           </ul>
+        </section>
+      ) : null}
+
+      {GUN_FILM[film.slug] ? (
+        <section className="mt-10 rounded-lg border border-line bg-card p-4 text-sm">
+          <h2 className="font-serif text-lg">이 작품의 권총</h2>
+          <p className="mt-1 text-muted">존이 쓴 권총과 그 역사는 자매 사이트 건 아카이브에 정리했습니다.</p>
+          <a href={`https://gun-archive.vercel.app/films/${GUN_FILM[film.slug]}?utm_source=johnwick-archive&utm_medium=film-page&utm_campaign=archive-network`} className="mt-2 inline-block rounded-full border border-gold/50 px-3 py-1 text-gold hover:bg-gold/10">건 아카이브 · {film.titleKo} 속 권총 →</a>
         </section>
       ) : null}
 

@@ -51,6 +51,7 @@ export const SISTER_SITES = [
   SISTER.ff,
   SISTER.bond,
   SISTER.mi,
+  { label: "건 아카이브 (영화 속 권총)", url: "https://gun-archive.vercel.app" },
   { label: "영화 체크리스트", url: "https://movie-checklist-sigma.vercel.app" },
   { label: "나두인물", url: "https://nadoo-people.vercel.app" },
   { label: "나두 허브", url: "https://tinalinkeom.vercel.app" },
