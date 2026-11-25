@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { CoupangCard } from "@/components/CoupangCard";
 import { PageTitle } from "@/components/ui";
@@ -28,6 +29,7 @@ export default function FilmsPage() {
           </tbody>
         </table>
       </div>
+      <NadooAd inline />
       <CoupangCard />
       <section>
         <h2 className="font-serif text-xl">이야기 순서로 보기</h2>

@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CarPhoto } from "@/components/CarPhoto";
@@ -72,6 +73,7 @@ export default async function CarPage({ params }: { params: Promise<{ slug: stri
         </ul>
       </section>
 
+      <NadooAd inline />
       <section className="mt-10">
         <h2 className="font-serif text-xl">출처</h2>
         <ul className="mt-2 list-disc space-y-1 pl-5 text-xs text-muted">

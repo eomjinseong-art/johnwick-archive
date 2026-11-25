@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { CoupangCard } from "@/components/CoupangCard";
 import { FilmChip, PageTitle } from "@/components/ui";
 import { world } from "@/data/world";
@@ -12,6 +13,7 @@ export default function WorldPage() {
       <nav className="mb-8 flex flex-wrap gap-2 text-xs">
         {world.map((w) => <a key={w.slug} href={`#${w.slug}`} className="rounded-full border border-line px-3 py-1 text-muted hover:text-gold">{w.term}</a>)}
       </nav>
+      <NadooAd inline />
       <div className="space-y-6">
         {world.map((w, i) => (
           <div key={w.slug}>

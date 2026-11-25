@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { CoupangCard } from "@/components/CoupangCard";
 import { PageTitle } from "@/components/ui";
@@ -59,6 +60,7 @@ export default function KeanuPage() {
         <p className="mt-2 text-xs text-muted">붉은 줄은 존 윅 시리즈입니다. <Link href="/films" className="underline">작품 보기</Link></p>
       </section>
 
+      <NadooAd inline />
       <section className="mt-10 rounded-lg border border-line bg-card p-4 text-sm leading-7 text-muted">
         <h2 className="font-serif text-lg text-paper">함께 보기</h2>
         <ul className="mt-2 list-disc pl-5">

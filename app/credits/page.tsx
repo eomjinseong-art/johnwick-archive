@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import { cars } from "@/data/cars";
 import { carImage } from "@/lib/car-images";
 import { PageTitle } from "@/components/ui";
@@ -30,6 +31,7 @@ export default function CreditsPage() {
           ))}
         </ul>
       </section>
+      <NadooAd inline />
       <section className="mt-8">
         <h2 className="font-serif text-xl">그 밖의 자료</h2>
         <ul className="mt-3 list-disc space-y-1 pl-5 text-sm leading-7">
