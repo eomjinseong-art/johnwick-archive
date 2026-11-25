@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { CarPhoto } from "@/components/CarPhoto";
 import { CoupangCard } from "@/components/CoupangCard";
@@ -39,6 +40,7 @@ export default function CarsPage() {
 
       <p className="mt-10 text-xs leading-6 text-muted">차량 사진은 위키미디어 커먼스에 공개 라이선스로 올라온 같은 차종 사진입니다. 영화에 쓰인 차량이 아니며, 작가와 라이선스는 각 차량 페이지와 <Link href="/credits" className="underline">출처</Link> 페이지에 적었습니다.</p>
 
+      <NadooAd inline />
       <section className="mt-12 rounded-xl border border-line bg-card p-5">
         <h2 className="font-serif text-xl text-gold">다른 영화 속 차량 아카이브</h2>
         <p className="mt-2 text-sm text-muted">모델별 자세한 이야기와 다른 영화 속 명차는 자매 사이트에서 이어집니다.</p>

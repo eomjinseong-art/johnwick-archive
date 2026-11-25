@@ -1,3 +1,4 @@
+import { NadooAd } from "@/components/NadooAd";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { CoupangCard } from "@/components/CoupangCard";
@@ -56,6 +57,7 @@ export default async function FilmPage({ params }: { params: Promise<{ slug: str
         </div>
       </section>
 
+      <NadooAd inline />
       <section className="mt-10">
         <h2 className="font-serif text-xl">주요 장면</h2>
         <ul className="mt-3 grid gap-3 sm:grid-cols-2">
