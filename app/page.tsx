@@ -6,7 +6,7 @@ import { characters } from "@/data/characters";
 import { films } from "@/data/films";
 import { world } from "@/data/world";
 import { pageMetadata } from "@/lib/seo";
-import { SITE_SUB, SITE_TAGLINE } from "@/lib/site";
+import { SITE_NAME, SITE_SUB, SITE_TAGLINE, SITE_URL } from "@/lib/site";
 
 export const metadata = pageMetadata({ title: "존 윅 아카이브", description: `${SITE_TAGLINE}. ${SITE_SUB}`, path: "/" });
 
@@ -14,6 +14,19 @@ export default function Home() {
   const heroCars = cars.filter((c) => c.hero);
   return (
     <div className="mx-auto max-w-6xl px-4 py-10">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            name: SITE_NAME,
+            url: SITE_URL,
+            description: `${SITE_TAGLINE}. ${SITE_SUB}`,
+            inLanguage: "ko",
+          }),
+        }}
+      />
       <section className="rounded-2xl border border-line bg-[radial-gradient(ellipse_at_top,#2a0f0f,transparent_60%)] px-6 py-12 sm:px-10">
         <p className="text-xs tracking-[0.3em] text-blood">JOHN WICK ARCHIVE</p>
         <h1 className="mt-3 font-serif text-4xl text-gold sm:text-5xl">존 윅 아카이브</h1>
